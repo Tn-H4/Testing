@@ -1,7 +1,0 @@
-pillow
-opencv-python
-imutils
-face-recognition
-torch
-nltk
-numpy
