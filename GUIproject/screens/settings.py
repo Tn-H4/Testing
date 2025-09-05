@@ -26,12 +26,12 @@ class SettingsScreen(tk.Frame):
                 tk.Label(cell, text="Language", bg=col, font=("Segoe UI", 16)).place(relx=0.05, rely=0.08, anchor="nw")
                 cell.bind("<Button-1>", lambda e: self._on_language())
             #In Working    
-            # elif i == 1:
-            #     tk.Label(cell, text="Capture", bg=col, font=("Segoe UI", 16)).place(relx=0.05, rely=0.08, anchor="nw")
-            #     cell.bind("<Button-1>", lambda e: self.app.show("capture"))
-            # elif i == 2:
-            #     tk.Label(cell, text="Train Faces", bg=col, font=("Segoe UI", 16)).place(relx=0.05, rely=0.08, anchor="nw")
-            #     cell.bind("<Button-1>", lambda e: self.app.show("train"))
+            elif i == 1:
+                tk.Label(cell, text="Capture", bg=col, font=("Segoe UI", 16)).place(relx=0.05, rely=0.08, anchor="nw")
+                cell.bind("<Button-1>", lambda e: self.app.show("capture"))
+            elif i == 2:
+                tk.Label(cell, text="Train Faces", bg=col, font=("Segoe UI", 16)).place(relx=0.05, rely=0.08, anchor="nw")
+                cell.bind("<Button-1>", lambda e: self.app.show("train"))
 
                 
     def on_show(self):

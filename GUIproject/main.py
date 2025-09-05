@@ -9,6 +9,11 @@ from screens.chat import ChatScreen
 from shared.utils import time_strings
 from shared.bot import ChatbotAssistant
 from shared.camera import CameraManager
+from screens.capture import CaptureScreen
+from screens.train_faces import TrainFacesScreen
+
+
+
 
 APP_W, APP_H, BAR_H = 1280, 720, 70
 CYAN = "#70e2ff"
@@ -75,6 +80,7 @@ class App(tk.Tk):
         self.register_screen("settings", SettingsScreen(self.top, self))
         self.register_screen("idle", IdleScreen(self.top, self))
         self.register_screen("chat", ChatScreen(self.top, self, assistant=self.assistant))
+        self.register_screen("capture", CaptureScreen(self.top, self))
 
         #Timeout counting
         self.idle_ms = 10_000
